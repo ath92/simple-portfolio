@@ -8,6 +8,7 @@
             :root{
                 --light: #fcfcfc;
                 --dark: #191929;
+                --accent: #3c39ff;
             }
 
             html, body {
@@ -18,35 +19,61 @@
             }
 
             * {
-                font-family: Helvetica, sans-serif;
                 color: var(--dark);
-            }
-
-            .flex-wrapper {
-            	display: flex;
+                font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans', 
+                'Helvetica Neue',sans-serif;
             }
 
             section {
             	box-sizing: border-box;
                 padding: 0;
-                min-height: 100vh;
-                border-right: 0.1px solid #ddd;
                 padding: 40px;
-                flex: 1 1 33%;
+                margin: 0 auto;
+                max-width: 600px;
             }
 
             p, a, p span {
-                line-height: 1.5;
-                font-family: Helvetica, sans-serif;
+                line-height: 1.8;
                 font-weight: 200;
                 font-size: 21px;
             }
 
+            p > a {
+                text-decoration: none;
+                display: inline-block;
+                line-height: 1.2em;
+                border-bottom: 1px solid var(--accent);
+                transition: .1s;
+            }
+
+            p > a:hover{
+                border-width: 5px;
+            }
+
             h1   {
                 line-height: 2;
-                font-family: Helvetica, sans-serif;
                 font-size: 42px;
                 margin-top: 0;
+                display: inline-block;
+                position: relative;
+            }
+
+            h1 > span::before {
+                content: "";
+                display: block;
+                background-color: var(--accent);
+                height: 60%;
+                position: absolute;
+                width: calc(100% + 10px);
+                top: 20%;
+                left: -5px;
+                z-index: -1;
+            }
+
+            h1 > span {
+                position: relative;
+                z-index: 2;
+                color: var(--light);
             }
 
             ol {
@@ -64,8 +91,12 @@
                 display: block;
                 width: 100%;
                 position: absolute;
-                top: 50%;
-                border: 0.5px solid var(--dark);
+                top: 55%;
+                border-bottom: 0.25px solid var(--dark);
+            }
+
+            li:hover::before {
+                border-color: var(--accent);
             }
 
             li a {
@@ -74,11 +105,7 @@
                 position: relative;
                 z-index: 2;
                 text-decoration: none;
-                padding-left: 8px;
-            }
-
-            li a:hover {
-                text-decoration: underline;
+                padding: 0 8px;
             }
 
             span {
@@ -90,9 +117,6 @@
             }
 
             @media only screen and (max-width: 800px) {
-                .flex-wrapper {
-                	flex-direction: column;
-                }
 
                 section{
                 	flex: 1 1 auto;
@@ -101,91 +125,93 @@
             }
 
         </style>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>" />
     </head>
     <body>
-    	<div class="flex-wrapper">
-	        <section class="about">
-	            <h1>Tom Hutman</h1>
-	            <p>
-	                Creative technologist who builds cool things for the web. 
-	                Passionate about developing quality software with a focus on user experience.
-	                Currently working as a front-end developer at <a href="https://www.getstream.io">Stream</a>.
-	            </p>
-	            <p>
-	                You can read all about me on <a href="https://www.linkedin.com/in/tom-hutman-11917878/">LinkedIn</a>,
-	                check out some code on <a href="https://www.github.com/ath92">GitHub</a>,
-	                or shoot me an <a href="mailto:tomhutman@gmail.com">email</a>.
-	            </p>
-	        </section>
+        <section class="about">
+            <h1>Tom Hutman</h1>
+            <p>
+                Creative technologist who likes building cool things for the web. 
+                Currently working as a javascript engineer at <a href="https://www.getstream.io">Stream</a>.
+            </p>
+            <p>
+                You can read all about me on <a href="https://www.linkedin.com/in/tom-hutman-11917878/">LinkedIn</a>,
+                check out some code on <a href="https://www.github.com/ath92">GitHub</a>,
+                or shoot me an <a href="mailto:tomhutman@gmail.com">email</a>.
+            </p>
+        </section>
 
-	        <section class="projects">
-	            <h1>Links to click</h1>
-	            <ol reversed>
-	                <li>
-	                    <a href="https://fractal.garden" target="_blank">
-	                        Realtime 3D fractal explorer
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="https://www.maanraket.nl/experiments/ascii-cam" target="_blank">
-	                        ASCII webcam
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="https://www.maanraket.nl/experiments/virtual-doom" target="_blank">
-	                        First person 3D room using React/DOM
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="https://www.maanraket.nl/experiments/noise-particles" target="_blank">
-	                        Simplex noise particles in Three.js
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="https://www.maanraket.nl/experiments/space-warp" target="_blank">
-	                        GLSL Space warp
-	                    </a>    
-	                </li>
-	                <li>
-	                    <a href="https://www.maanraket.nl/experiments/flock" target="_blank">
-	                        Boids in Three.js
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="https://www.maanraket.nl/experiments/tunnel" target="_blank">
-	                        Sine wave moiré patterns in P5.js
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="https://www.maanraket.nl/experiments/head-controller" target="_blank">
-	                        Multiplayer head-tracking
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="https://www.tomhutman.nl/martinabonetti" target="_blank">
-	                        Service designer portfolio
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="https://www.maanraket.nl/experiments/fractals" target="_blank">
-	                        WebGL Mandelbrot fractal explorer
-	                    </a>
-	                </li>
-	            </ol>
-	        </section>
-
-	        <section>
-
-	        </section>
-	    </div>
+        <section class="projects">
+            <h1>Links to click</h1>
+            <ol reversed>
+                <li>
+                    <a href="https://fractal.garden" target="_blank">
+                        Realtime 3D fractal explorer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://quizzical-mahavira-5334c6.netlify.app/" target="_blank">
+                        Strange mirror
+                    </a>
+                </li>
+                <li>
+                    <a href="https://condescending-jepsen-5f5132.netlify.app/" target="_blank">
+                        Metaballs
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.maanraket.nl/experiments/ascii-cam" target="_blank">
+                        ASCII webcam
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.maanraket.nl/experiments/virtual-doom" target="_blank">
+                        First person 3D room using React/DOM
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.maanraket.nl/experiments/noise-particles" target="_blank">
+                        Simplex noise particles
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.maanraket.nl/experiments/space-warp" target="_blank">
+                        Space warp
+                    </a>    
+                </li>
+                <li>
+                    <a href="https://www.maanraket.nl/experiments/flock" target="_blank">
+                        Flocking birds
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.maanraket.nl/experiments/tunnel" target="_blank">
+                        Light wave interference
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="https://www.maanraket.nl/experiments/head-controller" target="_blank">
+                        Multiplayer head-tracking
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="https://www.tomhutman.nl/martinabonetti" target="_blank">
+                        Service designer portfolio
+                    </a>
+                </li> -->
+                <li>
+                    <a href="https://www.maanraket.nl/experiments/fractals" target="_blank">
+                        Mandelbrot fractal explorer
+                    </a>
+                </li>
+            </ol>
+        </section>
 
         <script type="text/javascript">
             const textNode = 3; // 3 === TextNode.nodeType
 
             // setting up some global variables
-            let mouseX, mouseY;
-            let speedX = 0;
-            let speedY = 0;
+            let mouseX, mouseY, oldMouseX, oldMouseY;
 
             // impact of a mouseover (mult of speed variables)
             const impact = 0.2;
@@ -203,17 +229,19 @@
             let speedYs = Array(samples).fill(0);
 
             window.addEventListener('mousemove', e => {
-                if (mouseX !== undefined && mouseY !== undefined) {
-                    newSpeedX = e.screenX - mouseX;
-                    newSpeedY = e.screenY - mouseY;
-                    speedXs = [...speedXs.slice(1, samples - 1), newSpeedX];
-                    speedYs = [...speedYs.slice(1, samples - 1), newSpeedY];
-                    speedX = speedXs.reduce((total, speed) => total + speed, 0) / samples;
-                    speedY = speedYs.reduce((total, speed) => total + speed, 0) / samples;
-                }
                 mouseX = e.screenX;
                 mouseY = e.screenY;
             });
+
+            (function average() {
+                speedXs = [...speedXs.slice(1, samples - 1), mouseX - oldMouseX];
+                speedYs = [...speedYs.slice(1, samples - 1), mouseY - oldMouseY];
+                speedX = speedXs.reduce((total, speed) => total + speed, 0) / samples;
+                speedY = speedYs.reduce((total, speed) => total + speed, 0) / samples;
+                oldMouseX = mouseX;
+                oldMouseY = mouseY;
+                requestAnimationFrame(average);
+            })();
 
             const roundToZero = x => (x < roundingThreshold && x > -roundingThreshold) ? 0 : x;
             
