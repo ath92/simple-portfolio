@@ -1,17 +1,18 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Tom Hutman</title>
         <style type="text/css">
-            :root{
+            :root {
                 --light: #fcfcfc;
                 --dark: #191929;
                 --accent: #3c39ff;
             }
 
-            html, body {
+            html,
+            body {
                 margin: 0;
                 height: 100%;
                 width: 100%;
@@ -20,19 +21,32 @@
 
             * {
                 color: var(--dark);
-                font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans', 
-                'Helvetica Neue',sans-serif;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    Oxygen,
+                    Ubuntu,
+                    Cantarell,
+                    "Fira Sans",
+                    "Droid Sans",
+                    "Helvetica Neue",
+                    sans-serif;
             }
 
             section {
-            	box-sizing: border-box;
+                box-sizing: border-box;
                 padding: 0;
                 padding: 40px;
                 margin: 0 auto;
                 max-width: 600px;
             }
 
-            p, a, p span {
+            p,
+            a,
+            p span {
                 line-height: 1.8;
                 font-weight: 200;
                 font-size: 21px;
@@ -43,14 +57,14 @@
                 display: inline-block;
                 line-height: 1.2em;
                 border-bottom: 1px solid var(--accent);
-                transition: .1s;
+                transition: 0.1s;
             }
 
-            p > a:hover{
+            p > a:hover {
                 border-width: 5px;
             }
 
-            h1   {
+            h1 {
                 line-height: 2;
                 font-size: 42px;
                 margin-top: 0;
@@ -109,35 +123,44 @@
             }
 
             span {
-                margin-right: .3em;
+                margin-right: 0.3em;
             }
 
-            span, a {
+            span,
+            a {
                 display: inline-block;
             }
 
             @media only screen and (max-width: 800px) {
-
-                section{
-                	flex: 1 1 auto;
-                	min-height: auto;
+                section {
+                    flex: 1 1 auto;
+                    min-height: auto;
                 }
             }
-
         </style>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>"
+        />
     </head>
     <body>
         <section class="about">
             <h1>Tom Hutman</h1>
             <p>
-                Creative technologist who likes building cool things for the web. 
-                Currently working as a javascript engineer at <a href="https://www.getstream.io">Stream</a>.
+                Creative technologist who likes building cool things for the
+                web. Currently working as a software engineer on
+                <a
+                    href="https://www.autodesk.eu/products/forma/overview?term=1-YEAR&tab=subscription"
+                    >Autodesk Forma (formerly Spacemaker)</a
+                >.
             </p>
             <p>
-                You can read all about me on <a href="https://www.linkedin.com/in/tom-hutman-11917878/">LinkedIn</a>,
-                check out some code on <a href="https://www.github.com/ath92">GitHub</a>,
-                or shoot me an <a href="mailto:tomhutman@gmail.com">email</a>.
+                You can read all about me on
+                <a href="https://www.linkedin.com/in/tom-hutman-11917878/"
+                    >LinkedIn</a
+                >, check out some code on
+                <a href="https://www.github.com/ath92">GitHub</a>, or shoot me
+                an <a href="mailto:tomhutman@gmail.com">email</a>.
             </p>
         </section>
 
@@ -145,47 +168,78 @@
             <h1>Links to click</h1>
             <ol reversed>
                 <li>
-                    <a href="https://fractal-garden.netlify.app/" target="_blank">
+                    <a
+                        href="https://webgl-particle-life.netlify.app/"
+                        target="_blank"
+                    >
+                        GPGPU particle life
+                    </a>
+                </li>
+                <li>
+                    <a href="https://smooth-life.netlify.app/" target="_blank">
+                        Coloured SmoothLife
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://progressive-renderer.netlify.app/?fractal=klein2"
+                        target="_blank"
+                    >
                         Realtime 3D fractal explorer
                     </a>
                 </li>
                 <li>
-                    <a href="https://quizzical-mahavira-5334c6.netlify.app/" target="_blank">
+                    <a
+                        href="https://quizzical-mahavira-5334c6.netlify.app/"
+                        target="_blank"
+                    >
                         Strange mirror
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="https://condescending-jepsen-5f5132.netlify.app/" target="_blank">
                         Metaballs
                     </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="https://www.maanraket.nl/experiments/ascii-cam" target="_blank">
+                    <a
+                        href="https://www.maanraket.nl/experiments/ascii-cam"
+                        target="_blank"
+                    >
                         ASCII webcam
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.maanraket.nl/experiments/virtual-doom" target="_blank">
+                    <a
+                        href="https://www.maanraket.nl/experiments/virtual-doom"
+                        target="_blank"
+                    >
                         First person 3D room using React/DOM
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="https://www.maanraket.nl/experiments/noise-particles" target="_blank">
                         Simplex noise particles
                     </a>
-                </li>
-                <li>
+                </li> -->
+                <!-- <li>
                     <a href="https://www.maanraket.nl/experiments/space-warp" target="_blank">
                         Space warp
-                    </a>    
-                </li>
+                    </a>
+                </li> -->
                 <li>
-                    <a href="https://www.maanraket.nl/experiments/flock" target="_blank">
+                    <a
+                        href="https://www.maanraket.nl/experiments/flock"
+                        target="_blank"
+                    >
                         Flocking birds
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.maanraket.nl/experiments/tunnel" target="_blank">
+                    <a
+                        href="https://www.maanraket.nl/experiments/tunnel"
+                        target="_blank"
+                    >
                         Light wave interference
                     </a>
                 </li>
@@ -200,8 +254,11 @@
                     </a>
                 </li> -->
                 <li>
-                    <a href="https://www.maanraket.nl/experiments/fractals" target="_blank">
-                        Mandelbrot fractal explorer
+                    <a
+                        href="https://www.maanraket.nl/experiments/fractals"
+                        target="_blank"
+                    >
+                        2D Mandelbrot fractal explorer
                     </a>
                 </li>
             </ol>
@@ -228,31 +285,42 @@
             let speedXs = Array(samples).fill(0);
             let speedYs = Array(samples).fill(0);
 
-            window.addEventListener('mousemove', e => {
+            window.addEventListener("mousemove", (e) => {
                 mouseX = e.screenX;
                 mouseY = e.screenY;
             });
 
             (function average() {
-                speedXs = [...speedXs.slice(1, samples - 1), mouseX - oldMouseX];
-                speedYs = [...speedYs.slice(1, samples - 1), mouseY - oldMouseY];
-                speedX = speedXs.reduce((total, speed) => total + speed, 0) / samples;
-                speedY = speedYs.reduce((total, speed) => total + speed, 0) / samples;
+                speedXs = [
+                    ...speedXs.slice(1, samples - 1),
+                    mouseX - oldMouseX,
+                ];
+                speedYs = [
+                    ...speedYs.slice(1, samples - 1),
+                    mouseY - oldMouseY,
+                ];
+                speedX =
+                    speedXs.reduce((total, speed) => total + speed, 0) /
+                    samples;
+                speedY =
+                    speedYs.reduce((total, speed) => total + speed, 0) /
+                    samples;
                 oldMouseX = mouseX;
                 oldMouseY = mouseY;
                 requestAnimationFrame(average);
             })();
 
-            const roundToZero = x => (x < roundingThreshold && x > -roundingThreshold) ? 0 : x;
-            
-            const applyTransform = (element, x, y) => element.style.transform = `translate3D(${x}px, ${y}px, 0)`;
+            const roundToZero = (x) =>
+                x < roundingThreshold && x > -roundingThreshold ? 0 : x;
 
-            const makeMoveable = element => {
+            const applyTransform = (element, x, y) =>
+                (element.style.transform = `translate3D(${x}px, ${y}px, 0)`);
+
+            const makeMoveable = (element) => {
                 let x = 0;
                 let y = 0;
                 let vx = 0;
                 let vy = 0;
-
 
                 const crawlBack = () => {
                     x *= crawlBackSpeed;
@@ -263,10 +331,10 @@
 
                     applyTransform(element, x, y);
 
-                    if ((vx === 0 && vy === 0) &&  (x !== 0 || y !== 0)) {
+                    if (vx === 0 && vy === 0 && (x !== 0 || y !== 0)) {
                         requestAnimationFrame(crawlBack);
                     }
-                }
+                };
 
                 const animate = () => {
                     x += vx;
@@ -285,24 +353,27 @@
                     }
                 };
 
-                element.addEventListener('mouseover', e => {
+                element.addEventListener("mouseover", (e) => {
                     vx = speedX * impact;
                     vy = speedY * impact;
                     animate();
                 });
             };
 
-            document.querySelectorAll('h1').forEach(element => {
-                [...element.childNodes].forEach(childNode => {
+            document.querySelectorAll("h1").forEach((element) => {
+                [...element.childNodes].forEach((childNode) => {
                     if (childNode.nodeType === textNode) {
                         // split textNode up into spans
-                        childNode.textContent.trim().split(' ').forEach(word => {
-                            if (!word.trim()) return;
-                            const span = document.createElement('span');
-                            span.innerHTML = `${word} `;
-                            element.insertBefore(span, childNode);
-                            makeMoveable(span);
-                        })
+                        childNode.textContent
+                            .trim()
+                            .split(" ")
+                            .forEach((word) => {
+                                if (!word.trim()) return;
+                                const span = document.createElement("span");
+                                span.innerHTML = `${word} `;
+                                element.insertBefore(span, childNode);
+                                makeMoveable(span);
+                            });
                         element.removeChild(childNode);
                     } else {
                         makeMoveable(childNode);
