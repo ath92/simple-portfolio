@@ -39,7 +39,7 @@
             section {
                 box-sizing: border-box;
                 padding: 0;
-                padding: 40px;
+                padding: 40px 40px 0 40px;
                 margin: 0 auto;
                 max-width: 600px;
             }
@@ -68,6 +68,7 @@
                 line-height: 2;
                 font-size: 42px;
                 margin-top: 0;
+                margin-bottom: 0em;
                 display: inline-block;
                 position: relative;
             }
@@ -131,6 +132,14 @@
                 display: inline-block;
             }
 
+            span.small {
+                display: block;
+                font-size: 0.7em;
+                & + * {
+                    margin-top: 0.2em;
+                }
+            }
+
             @media only screen and (max-width: 800px) {
                 section {
                     flex: 1 1 auto;
@@ -146,21 +155,14 @@
     <body>
         <section class="about">
             <h1>Tom Hutman</h1>
+            <!--<span class="small">technologist</span>-->
+            <p>Software person who likes building things for the web.</p>
             <p>
-                Creative technologist who likes building cool things for the
-                web. Currently working as a software engineer on
-                <a
-                    href="https://www.autodesk.eu/products/forma/overview?term=1-YEAR&tab=subscription"
-                    >Autodesk Forma (formerly Spacemaker)</a
-                >.
-            </p>
-            <p>
-                You can read all about me on
+                Reach me on
                 <a href="https://www.linkedin.com/in/tom-hutman-11917878/"
                     >LinkedIn</a
-                >, check out some code on
-                <a href="https://www.github.com/ath92">GitHub</a>, or shoot me
-                an <a href="mailto:tomhutman@gmail.com">email</a>.
+                >, <a href="https://www.github.com/ath92">GitHub</a>, or
+                <a href="mailto:tomhutman@gmail.com">email</a>.
             </p>
         </section>
 
